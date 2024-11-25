@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-PHICOIN_URL="https://github.com/PhicoinProject/phicoin/releases/download/1.1.1.1/linux.tar"
+PHICOIN_URL="https://github.com/PhicoinProject/PhicoinProject/releases/download/1.1.1.1/linux.tar"
 DOWNLOAD_FILE="linux.tar"
 EXTRACT_DIR="./linux"
 DATA_DIR="./data"
