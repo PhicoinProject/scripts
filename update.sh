@@ -3,7 +3,7 @@
 # Define variables
 PHICOIN_URL="https://github.com/PhicoinProject/PhicoinProject/releases/download/1.1.2/linux_64.tar"
 DOWNLOAD_FILE="linux.tar"
-EXTRACT_DIR="./linux"
+EXTRACT_DIR="./release/linux"
 DATA_DIR="./data"
 EXECUTABLE="$EXTRACT_DIR/phicoind"
 CLI="$EXTRACT_DIR/phicoin-cli"
@@ -49,6 +49,10 @@ echo "Moving new executables to current directory..."
 mv "$EXECUTABLE" ./phicoind
 mv "$CLI" ./phicoin-cli
 mv "$QT" ./phicoin-qt
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to move executables. Exiting."
+  exit 1
+fi
 
 # Step 6: Grant execute permissions
 echo "Granting execute permissions to new executables..."
